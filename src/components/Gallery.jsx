@@ -1,4 +1,3 @@
-import mcdata from "../mcdata";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
@@ -66,14 +65,14 @@ const Gallery = () => {
         {allimages &&
           allimages
             .filter((allimages) =>
-              allimages.name.toLowerCase().includes(containsWord.toLowerCase())
+              allimages.brand.toLowerCase().includes(containsWord.toLowerCase())
             )
             .filter((data) =>
-              data.name.toLowerCase().includes(selected.toLowerCase())
+              data.brand.toLowerCase().includes(selected.toLowerCase())
             )
-            .map(({ id, name }) => (
+            .map(({ id, name, brand }) => (
               <div className="">
-                <a className="hidden"></a>
+                <a className="hidden">{brand}</a>
                 <img
                   key={id}
                   alt="gallery"
