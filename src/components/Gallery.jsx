@@ -39,7 +39,7 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div>
+    <div className="bg-creme ">
       <input
         className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body"
         type="text"
@@ -61,7 +61,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className=" text-gray-700 grid grid-cols-4 mt-10 ">
+      <div className=" text-gray-700 grid grid-cols-4 gap-4 mt-10 ">
         {allimages &&
           allimages
             .filter((allimages) =>

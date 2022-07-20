@@ -71,12 +71,6 @@ const Carousel = () => {
           data-bs-slide-to="9"
           aria-label="Slide 10"
         ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="10"
-          aria-label="Slide 11"
-        ></button>
       </div>
       <div className="carousel-inner relative w-full overflow-hidden">
         <div className="carousel-item active float-left w-full">
@@ -136,12 +130,6 @@ const Carousel = () => {
         <div className="carousel-item float-left w-full">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/bwbitch.svg?alt=media&token=7a898715-00da-4954-bc1f-a5799181c494"
-            className="block w-full"
-          />
-        </div>
-        <div className="carousel-item float-left w-full">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/makeup.svg?alt=media&token=66a11afc-87d3-40c1-8922-ac4a92ff1e0a"
             className="block w-full"
           />
         </div>
