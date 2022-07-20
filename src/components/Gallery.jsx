@@ -4,6 +4,9 @@ import axios from "axios";
 
 const Gallery = () => {
   const [allbrands, setAllBrands] = useState([]);
+  const [allimages, setAllImages] = useState([]);
+
+  // axios pour récupèrer les marques
   useEffect(() => {
     const getallBrands = async () => {
       // verifier que le .env soit bien identique au lien postman qui fonctionne
@@ -13,6 +16,19 @@ const Gallery = () => {
       setAllBrands(data);
     };
     getallBrands();
+  }, []);
+
+  // axios pour récupèrer les images
+
+  useEffect(() => {
+    const getallImages = async () => {
+      // verifier que le .env soit bien identique au lien postman qui fonctionne
+      const { data } = await axios.get(
+        `${import.meta.env.VITE_API_URL}api/images`
+      );
+      setAllImages(data);
+    };
+    getallImages();
   }, []);
 
   const [containsWord, setContainsWord] = useState("");
@@ -47,24 +63,24 @@ const Gallery = () => {
       </select>
 
       <div className=" text-gray-700 grid grid-cols-4 mt-10 ">
-        {mcdata &&
-          mcdata
-            .filter((mcdata) =>
-              mcdata.name.toLowerCase().includes(containsWord.toLowerCase())
+        {allimages &&
+          allimages
+            .filter((allimages) =>
+              allimages.name.toLowerCase().includes(containsWord.toLowerCase())
             )
             .filter((data) =>
               data.name.toLowerCase().includes(selected.toLowerCase())
             )
-            .map(({ src, name }, index) => (
+            .map(({ id, name }) => (
               <div className="">
-                <a className="hidden">{name}</a>
+                <a className="hidden"></a>
                 <img
-                  key={index}
+                  key={id}
                   alt="gallery"
                   value={containsWord}
                   onChange={(e) => handleContainsWord(e.target.value)}
                   className="block object-cover object-center rounded-lg w-[60%] ml-10 hover:scale-150 cursor-zoom-in    "
-                  src={src}
+                  src={name}
                 />
               </div>
             ))}
