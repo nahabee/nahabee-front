@@ -17,13 +17,13 @@ const Gallery = () => {
     getallBrands();
   }, []);
 
-  // axios pour récupèrer les images
+  // axios pour récupèrer les images par page
 
   useEffect(() => {
     const getallImages = async () => {
       // verifier que le .env soit bien identique au lien postman qui fonctionne
       const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/images`
+        `${import.meta.env.VITE_API_URL}api/pages/1/images`
       );
       setAllImages(data);
     };
