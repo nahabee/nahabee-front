@@ -6,7 +6,7 @@ const Campaigns = () => {
     <div className="bg-creme h-screen">
       <NavBar />
       <div className="flex flex-col mt-20 ">
-        <span className="bg-dark h-2 w-screen"></span>
+        <span className="bg-dark h-2 w-screen mobS:w-screen"></span>
         <Gallery />
       </div>
     </div>

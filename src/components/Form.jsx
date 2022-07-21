@@ -31,7 +31,7 @@ const Form = () => {
 
   return (
     <div className="h-auto">
-      <div className="block p-6 rounded-lg shadow-lg m-auto w-1/2 mt-40 font-body">
+      <div className="block p-6 rounded-lg shadow-lg m-auto w-1/2 mt-40 font-body mobS:w-4/5">
         <form
           onSubmit={(e) => {
             postForm(e);

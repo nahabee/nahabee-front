@@ -34,8 +34,8 @@ const Polas = () => {
   return (
     <div className="bg-creme w-screen h-screen">
       <NavBar />
-      <div className="flex pb-10 mt-6 ">
-        <div className="grid grid-cols-2 grid-rows-2  m-auto shadow-lg gap-10  mt-10 h-5/6 place-items-center">
+      <div className="flex pb-10 mt-6 mobS:bg-creme ">
+        <div className="grid grid-cols-2 grid-rows-2  m-auto shadow-lg gap-10  mt-10 h-5/6 place-items-center mobS:grid-cols-1 ">
           {allimages &&
             allimages.map(({ name, id }) => (
               <div key={id} className="group cursor-pointer ">
@@ -44,10 +44,10 @@ const Polas = () => {
                   src={name}
                 />
                 <span className="absolute -mt-44 hover:text-transparent translate-x-2">
-                  <a className="font-body flex z-50 flex-col font-extrabold text-xl opacity-0 group-hover:opacity-100 group-hover:">
+                  <a className="font-body flex z-50 flex-col font-extrabold text-xl opacity-0 group-hover:opacity-100 mobS:hidden">
                     Height: 166cm - 5.6 UK
                   </a>
-                  <a className="font-body font-extrabold text-xl opacity-0 group-hover:opacity-100  ">
+                  <a className="font-body font-extrabold text-xl opacity-0 group-hover:opacity-100 mobS:hidden ">
                     Shoes: 38 EU - 5 UK - 7 US
                   </a>
                 </span>

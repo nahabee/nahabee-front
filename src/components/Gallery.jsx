@@ -41,7 +41,7 @@ const Gallery = () => {
   return (
     <div className="bg-creme ">
       <input
-        className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body"
+        className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:w-44 mobS:ml-4 "
         type="text"
         placeholder="Search by brand"
         value={containsWord}
@@ -61,7 +61,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className=" text-gray-700 grid grid-cols-4 gap-4 mt-10 ">
+      <div className="text-gray-700 grid grid-cols-4 gap-4 mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
         {allimages &&
           allimages
             .filter((allimages) =>

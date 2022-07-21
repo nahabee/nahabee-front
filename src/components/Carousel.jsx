@@ -1,13 +1,13 @@
 import "tw-elements";
-
+// cette page n'est pas du tout terminée c'est uniquement pour avoir un affichage vite fait
 const Carousel = () => {
   return (
     <div
       id="carouselExampleIndicators"
-      className="carousel slide relative"
+      className="carousel slide relative "
       data-bs-ride="carousel"
     >
-      <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+      <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4 mobS:hidden">
         <button
           type="button"
           data-bs-target="#carouselExampleIndicators"
@@ -72,11 +72,11 @@ const Carousel = () => {
           aria-label="Slide 10"
         ></button>
       </div>
-      <div className="carousel-inner relative w-full overflow-hidden">
+      <div className="carousel-inner relative w-full overflow-hidden mobS:hidden">
         <div className="carousel-item active float-left w-full">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/braids.svg?alt=media&token=8ccad532-e418-439b-8e5f-da7ba4d27e1a"
-            className="block w-full"
+            className="block w-full "
           />
         </div>
         <div className="carousel-item float-left w-full">
@@ -134,8 +134,25 @@ const Carousel = () => {
           />
         </div>
       </div>
+      <div className="ds:hidden">
+        <div>
+          <img src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/6.jpg?alt=media&token=1a2e7740-f969-422d-b530-a9ef83603aaf" />
+        </div>
+        <div>
+          <img src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/7.jpg?alt=media&token=5a2e2c29-7eab-4f58-a72b-17b92f86f3a9" />
+        </div>
+        <div>
+          <img src="https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/Short%20hair%20don’t%20care.jpg?alt=media&token=953c454f-6c65-47cc-897e-ee35d1e7aec3" />
+        </div>
+        <div>
+          <img src=" https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/IMG_5435.jpg?alt=media&token=02c6116b-4be3-4b95-b770-d8c7ea7f5224" />
+        </div>
+        <div>
+          <img src=" https://firebasestorage.googleapis.com/v0/b/nahabee-8e73f.appspot.com/o/IMG_5456.jpg?alt=media&token=ce353fa2-2c88-44f9-8772-a1072b4c42af" />
+        </div>
+      </div>
       <button
-        className="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+        className="mobS:hidden carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
@@ -147,7 +164,7 @@ const Carousel = () => {
         <span className="visually-hidden">Previous</span>
       </button>
       <button
-        className="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+        className="mobS:hidden carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
