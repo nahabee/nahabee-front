@@ -17,13 +17,13 @@ const Gallery = () => {
     getallBrands();
   }, []);
 
-  // axios pour récupèrer les images
+  // axios pour récupèrer les images par page
 
   useEffect(() => {
     const getallImages = async () => {
       // verifier que le .env soit bien identique au lien postman qui fonctionne
       const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/images`
+        `${import.meta.env.VITE_API_URL}api/pages/1/images`
       );
       setAllImages(data);
     };
@@ -39,7 +39,7 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div>
+    <div className="bg-creme ">
       <input
         className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body"
         type="text"
@@ -61,7 +61,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className=" text-gray-700 grid grid-cols-4 mt-10 ">
+      <div className=" text-gray-700 grid grid-cols-4 gap-4 mt-10 ">
         {allimages &&
           allimages
             .filter((allimages) =>

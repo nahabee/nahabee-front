@@ -25,9 +25,11 @@ const NavBar = () => {
               Shoot
             </li>
           </Link>
-          <li className="hover:text-grey decoration-solid flex text-green  flex-row">
-            Contact
-          </li>
+          <Link to="/contact">
+            <li className="hover:text-grey decoration-solid flex text-green  flex-row">
+              Contact
+            </li>
+          </Link>
         </ul>
       </nav>
     </div>
