@@ -5,7 +5,18 @@ module.exports = {
   ],
 
   theme: {
-    screens: {},
+    screens: {
+      "2xl": { max: "1535px" },
+      lg: { max: "1024px" },
+      xs: { min: "1025px" },
+      md: { min: "767px" },
+      ml: { min: "486px" },
+      ds: { min: "426px" },
+      ms: { min: "375px" },
+      sm: { max: "639px" },
+      mobS: { max: "376px" },
+      m: { min: "640px" },
+    },
     letterSpacing: {
       tightest: "-.075em",
       tighter: "-.05em",
