@@ -48,6 +48,7 @@ const Form = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
+              required="true"
               type="text"
               value={name}
               className="
@@ -71,6 +72,7 @@ const Form = () => {
               }}
               type="email"
               value={email}
+              required="true"
               className="
         w-full
         px-3
@@ -91,6 +93,7 @@ const Form = () => {
           <div className="mb-6">
             <textarea
               value={message}
+              required="true"
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
@@ -125,15 +128,11 @@ const Form = () => {
       bg-grey
       text-white
       text-xs
-      leading-tight
+  
       uppercase
       rounded
-      shadow-md
-     
-      transition
-      duration-150
-      ease-in-out
-      focus:shadow-md"
+      
+       hover:bg-transparent hover:text-dark hover:border-grey hover:border"
           >
             Send
           </button>
