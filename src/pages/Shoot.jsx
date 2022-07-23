@@ -12,7 +12,7 @@ const Shoot = () => {
     const getallImages = async () => {
       // verifier que le .env soit bien identique au lien postman qui fonctionne
       const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/pages/3/images`
+        `${import.meta.env.VITE_API_URL}api/pages/21/images`
       );
       setAllImages(data);
     };
