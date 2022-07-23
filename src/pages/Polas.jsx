@@ -4,7 +4,6 @@ import axios from "axios";
 
 const Polas = () => {
   const [allimages, setAllImages] = useState([]);
-  const [text, setText] = useState();
 
   // axios pour récupèrer les images par page
 
@@ -17,18 +16,6 @@ const Polas = () => {
       setAllImages(data);
     };
     getallImages();
-  }, []);
-  // axios pour récupèrer le texte
-
-  useEffect(() => {
-    const getText = async () => {
-      // verifier que le .env soit bien identique au lien postman qui fonctionne
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/pages`
-      );
-      setText(data);
-    };
-    getText();
   }, []);
 
   return (
