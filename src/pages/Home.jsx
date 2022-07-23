@@ -30,7 +30,7 @@ const Home = () => {
         <div className="">
           <ReactPlayer
             width="100%"
-            loop="true"
+            loop={true}
             url="https://youtu.be/1YdGVwt6d8w"
           />
         </div>
