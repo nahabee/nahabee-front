@@ -30,8 +30,14 @@ const Form = () => {
   };
 
   return (
-    <div className="h-auto">
-      <div className="block p-6 rounded-lg shadow-lg m-auto w-1/2 mt-40 font-body mobS:w-4/5">
+    <div className="">
+      <h1 className="font-title flex opacity-80 w-1/2 z-50 text-8xl m-auto mt-20">
+        Ask anything
+      </h1>
+      <div
+        className="block p-6 pt-12 rounded-lg shadow-2xl m-auto w-1/2 -mt-10
+        font-body mobS:w-4/5"
+      >
         <form
           onSubmit={(e) => {
             postForm(e);

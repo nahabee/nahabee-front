@@ -49,7 +49,7 @@ const Gallery = () => {
       />
 
       <select
-        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-36 mt-4 "
+        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-40 mt-4 "
         onChange={(e) => handleSetBrand(e)}
       >
         <option value=""> All brands</option>
@@ -61,7 +61,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className="text-gray-700 grid grid-cols-4 gap-4 mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
+      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme cursor-pointer mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
         {allimages &&
           allimages
             .filter((allimages) =>
@@ -71,14 +71,13 @@ const Gallery = () => {
               data.brand.toLowerCase().includes(selected.toLowerCase())
             )
             .map(({ id, name, brand }) => (
-              <div className="">
+              <div key={id} className="bg-creme">
                 <a className="hidden">{brand}</a>
                 <img
-                  key={id}
                   alt="gallery"
                   value={containsWord}
                   onChange={(e) => handleContainsWord(e.target.value)}
-                  className="block object-cover object-center rounded-lg w-[60%] ml-10 hover:scale-150 cursor-zoom-in    "
+                  className="block object-cover object-center rounded-lg w-[70%] ml-10 hover:scale-110 transition hover:duration-700 hover:ease-in-out"
                   src={name}
                 />
               </div>
