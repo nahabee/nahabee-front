@@ -39,7 +39,7 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div className="bg-creme ">
+    <div className="bg-creme mobS:bg-dark">
       <input
         className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:w-44 mobS:ml-4 "
         type="text"
@@ -61,7 +61,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme cursor-pointer mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
+      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-dark cursor-pointer mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
         {allimages &&
           allimages
             .filter((allimages) =>
@@ -71,7 +71,7 @@ const Gallery = () => {
               data.brand.toLowerCase().includes(selected.toLowerCase())
             )
             .map(({ id, name, brand }) => (
-              <div key={id} className="bg-creme">
+              <div key={id}>
                 <a className="hidden">{brand}</a>
                 <img
                   alt="gallery"

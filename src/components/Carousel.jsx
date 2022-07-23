@@ -19,7 +19,7 @@ const Carousel = () => {
     getallImages();
   }, []);
   return (
-    <div className="w-[85%] flex jusitfy-center items-center ">
+    <div className="w-[85%] flex jusitfy-center items-center">
       <AliceCarousel autoPlayInterval="4000">
         {allimages &&
           allimages.map(({ name, id }) => (

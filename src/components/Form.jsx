@@ -31,12 +31,12 @@ const Form = () => {
 
   return (
     <div className="">
-      <h1 className="font-title flex opacity-80 w-1/2 z-50 text-8xl m-auto mt-20">
+      <h1 className="font-title flex opacity-80 w-1/2 z-50 text-8xl m-auto mt-20 mobS:text-5xl mobS:mt-40 mobS:m-0 mobS:ml-5 mobS:text-creme mobS:opacity-100">
         Ask anything
       </h1>
       <div
         className="block p-6 pt-12 rounded-lg shadow-2xl m-auto w-1/2 -mt-10
-        font-body mobS:w-4/5"
+        font-body mobS:w-4/5 mobS:mt-3"
       >
         <form
           onSubmit={(e) => {
@@ -48,7 +48,7 @@ const Form = () => {
               onChange={(e) => {
                 setName(e.target.value);
               }}
-              required="true"
+              required={true}
               type="text"
               value={name}
               className="
@@ -72,7 +72,7 @@ const Form = () => {
               }}
               type="email"
               value={email}
-              required="true"
+              required={true}
               className="
         w-full
         px-3
@@ -93,7 +93,7 @@ const Form = () => {
           <div className="mb-6">
             <textarea
               value={message}
-              required="true"
+              required={true}
               onChange={(e) => {
                 setMessage(e.target.value);
               }}
