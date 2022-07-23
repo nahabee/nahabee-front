@@ -8,7 +8,7 @@ module.exports = {
     screens: {
       "2xl": { max: "1535px" },
       lg: { max: "1024px" },
-      xs: { min: "1025px" },
+      xs: { min: "1020px" },
       md: { min: "767px" },
       ml: { min: "486px" },
       ds: { min: "426px" },

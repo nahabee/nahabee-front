@@ -31,9 +31,9 @@ const Polas = () => {
   }, []);
 
   return (
-    <div className="bg-creme w-screen h-screen">
+    <div className="bg-creme w-screen h-screen mobS:bg-dark">
       <NavBar />
-      <div className="flex pb-10 mt-6 mobS:bg-creme ">
+      <div className="flex pb-10 mt-6 mobS:bg-dark ">
         <div className="grid grid-cols-2 grid-rows-2 m-auto shadow-xl mt-5 rounded-lg h-5/6 place-items-center mobS:grid-cols-1 ">
           {allimages &&
             allimages.map(({ name, id }) => (
@@ -48,8 +48,8 @@ const Polas = () => {
               </div>
             ))}
         </div>
-        <div className="w-1/2 flex flex-col">
-          <h1 className=" font-title text-7xl w-1/2 mt-8 opacity-80">
+        <div className="w-1/2 flex flex-col mobS:hidden ">
+          <h1 className=" font-title text-7xl w-1/2 mt-8 opacity-80 mobS:text-xl">
             MODEL stats,
           </h1>
           <div className="flex flex-col group mt-5">
@@ -66,6 +66,24 @@ const Polas = () => {
                 </div>
               ))}
           </div>
+        </div>
+      </div>
+      {/* model stats for mobile only */}
+      <div className="xs:hidden bg-dark">
+        <h1 className="font-title text-5xl text-center text-creme">
+          {" "}
+          MODEL stats
+        </h1>
+        <div className="flex flex-col text-creme py-10">
+          {allmesures &&
+            allmesures.map(({ name, description, id }) => (
+              <div key={id} className="flex flex-col mt-6">
+                <a className="font-body text-xl ml-20 ">
+                  <span className="font-subtitle tracking-widest">{name}</span>:{" "}
+                  {description}
+                </a>
+              </div>
+            ))}
         </div>
       </div>
     </div>

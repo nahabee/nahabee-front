@@ -18,7 +18,9 @@ const MenuResponsiv = ({ showMenu, active }) => {
             className="cursor-pointer scale-x-100"
           />
         </div>
-
+        <li className="hover:underline font-title ">
+          <Link to="/">nahabee</Link>
+        </li>
         <li className="hover:underline font-body ">
           <Link to="/campaigns">Campaigns</Link>
         </li>
