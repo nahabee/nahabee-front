@@ -5,7 +5,7 @@ const Shoot = () => {
   return (
     <div className="h-screen w-screen bg-creme ">
       <NavBar />
-      <div className="mt-10">
+      <div className="flex justify-center shadow-2xl rounded-lg mx-20 mt-5">
         <Carousel />
       </div>
     </div>
