@@ -25,7 +25,7 @@ const Shoot = () => {
         <Carousel />
       </div>
       {/* mobile version */}
-      <div className="xs:hidden">
+      <div className="xs:hidden bg-dark">
         {allimages &&
           allimages.map(({ name, id }) => <img key={id} src={name} />)}
       </div>
