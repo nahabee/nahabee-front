@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MenuResponsiv = ({ showMenu, active }) => {
   return (
-    <div className="z-50 fixed">
+    <div className="z-50 fixed mobS:bg-grey">
       <ul
         className={
           active
