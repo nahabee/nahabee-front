@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MenuResponsiv = ({ showMenu, active }) => {
   return (
-    <div className="z-50 fixed mobS:bg-grey">
+    <div className="z-50 absolute">
       <ul
         className={
           active
@@ -15,7 +15,7 @@ const MenuResponsiv = ({ showMenu, active }) => {
         <div className="absolute right-6 xs:hidden top-6 scale-x-100 z-50">
           <CloseIcon
             onClick={showMenu}
-            className="cursor-pointer scale-x-100"
+            className="cursor-pointer scale-x-150"
           />
         </div>
         <li className="hover:underline font-title ">
