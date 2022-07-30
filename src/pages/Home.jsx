@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ReactPlayer from "react-player";
+import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
@@ -14,25 +14,15 @@ const Home = () => {
         </h2>
       </div>
       {/* mobile version */}
-      <div className="xs:hidden bg-dark h-screen w-screen">
-        <h1 className="font-title text-creme text-9xl flex flex-col text-center">
-          na
-        </h1>
-        <h1 className="font-title text-creme text-9xl flex flex-col text-center">
-          ha
-        </h1>
-        <h1 className="font-subtitle text-creme text-9xl flex ml-14 text-center">
-          <Link to="/campaigns">
-            <button className="rounded-full h-8 w-8 bg-creme hover:bg-grey animate-bounce hover:animate-none" />
-          </Link>
-          bee
-        </h1>
-        <div className="">
-          <ReactPlayer
-            width="100%"
-            loop={true}
-            url="https://youtu.be/1YdGVwt6d8w"
-          />
+      <div className="xs:hidden bg-grey h-screen w-screen">
+        <NavBar />
+        <div>
+          <h1 className="font-title text-10xl flex justify-center text-creme">
+            n
+          </h1>
+          <h1 className="font-title text-10xl flex justify-center text-creme -mt-72">
+            a
+          </h1>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const MenuResponsiv = ({ showMenu, active }) => {
       <ul
         className={
           active
-            ? "flex-col flex items-center fixed inset-0 full bg-dark text-2xl backdrop-blur-sm gap-20 justify-center"
+            ? "flex-col flex items-center fixed inset-0 full bg-grey text-2xl backdrop-blur-sm gap-20 justify-center"
             : "hidden"
         }
       >

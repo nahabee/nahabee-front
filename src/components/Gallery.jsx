@@ -38,9 +38,9 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div className="bg-creme mobS:bg-dark">
+    <div className="bg-creme mobS:bg-grey">
       <input
-        className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:w-44 mobS:ml-4 "
+        className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:hidden"
         type="text"
         placeholder="Search by brand"
         value={containsWord}
@@ -48,7 +48,7 @@ const Gallery = () => {
       />
 
       <select
-        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-40 mt-4 "
+        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-40 mt-4 mobS:flex mobS:m-auto mobS:w-[70%] mobS:mt-10 "
         onChange={(e) => handleSetBrand(e)}
       >
         <option value=""> All brands</option>
@@ -60,7 +60,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-dark cursor-pointer mt-10 mobS:grid-cols-2 mobS:gap-2 mobS:-ml-4 mobS:w-screen">
+      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-grey mt-10 mobS:grid-cols-1">
         {allimages &&
           allimages
             .filter((allimages) =>
@@ -76,7 +76,7 @@ const Gallery = () => {
                   alt="gallery"
                   value={containsWord}
                   onChange={(e) => handleContainsWord(e.target.value)}
-                  className="block object-cover object-center rounded-lg w-[70%] ml-10 hover:scale-110 transition hover:duration-700 hover:ease-in-out"
+                  className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
                   src={name}
                 />
               </div>

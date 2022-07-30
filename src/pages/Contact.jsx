@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 
 const Contact = () => {
   return (
-    <div className="h-screen w-screen bg-creme mobS:bg-dark">
+    <div className="h-screen w-screen bg-creme mobS:bg-grey">
       <NavBar />
       <Form />
     </div>
