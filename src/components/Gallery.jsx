@@ -18,7 +18,6 @@ const Gallery = () => {
   }, []);
 
   // axios pour récupèrer les images par page
-
   useEffect(() => {
     const getallImages = async () => {
       // verifier que le .env soit bien identique au lien postman qui fonctionne
