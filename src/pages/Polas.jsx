@@ -63,7 +63,7 @@ const Polas = () => {
             <div className=" h-60 w-32 flex bg-stone-900 opacity-90 " />
             {allmesures &&
               allmesures.map(({ name, description, id }) => (
-                <div key={id} className="flex flex-col mt-[-3.7rem]">
+                <div key={id} className="flex flex-col gap-2 mt-[-3.5rem]">
                   <a className="font-body z-50 text-xl mobS:hidden ml-40 tracking-widest">
                     <span className="font-subtitle opacity-80 tracking-normal ">
                       {name}
