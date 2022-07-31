@@ -1,22 +1,11 @@
 import NavBar from "../components/NavBar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import axios from "axios";
+import CurrentDataContext from "../context/currentData";
 
 const Polas = () => {
-  const [allimages, setAllImages] = useState([]);
+  const { polas } = useContext(CurrentDataContext);
   const [allmesures, setAllMesures] = useState([]);
-
-  // axios pour récupèrer les images par page
-  useEffect(() => {
-    const getallImages = async () => {
-      // verifier que le .env soit bien identique au lien postman qui fonctionne
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/pages/11/images`
-      );
-      setAllImages(data);
-    };
-    getallImages();
-  }, []);
 
   // axios pour récupèrer les mesures
   useEffect(() => {
@@ -41,8 +30,8 @@ const Polas = () => {
       </div>
       <div className="flex pb-10 mt-6 mobS:bg-grey mobS:pb-0">
         <div className="grid grid-cols-2 grid-rows-2 m-auto shadow-xl mt-5 rounded-lg h-5/6 place-items-center mobS:shadow-none mobS:gap-4">
-          {allimages &&
-            allimages.map(({ name, id }) => (
+          {polas &&
+            polas.map(({ name, id }) => (
               <div key={id}>
                 <a href="https://www.instagram.com/nahabee/" target="_blank">
                   {" "}

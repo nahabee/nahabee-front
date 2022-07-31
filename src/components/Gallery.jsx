@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { useContext } from "react";
+import CurrentDataContext from "../context/currentData";
 
 const Gallery = () => {
   const [allbrands, setAllBrands] = useState([]);
-  const [allimages, setAllImages] = useState([]);
+  const { campaigns } = useContext(CurrentDataContext);
 
   // axios pour récupèrer les marques
   useEffect(() => {
@@ -16,19 +18,6 @@ const Gallery = () => {
     };
     getallBrands();
   }, []);
-
-  // axios pour récupèrer les images par page
-  useEffect(() => {
-    const getallImages = async () => {
-      // verifier que le .env soit bien identique au lien postman qui fonctionne
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/pages/1/images`
-      );
-      setAllImages(data);
-    };
-    getallImages();
-  }, []);
-
   const [containsWord, setContainsWord] = useState("");
   const [selected, setSelected] = useState("");
   const handleContainsWord = (word) => {
@@ -61,10 +50,10 @@ const Gallery = () => {
       </select>
 
       <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-grey mt-10 mobS:grid-cols-1 mobS:rounded-lg">
-        {allimages &&
-          allimages
-            .filter((allimages) =>
-              allimages.brand.toLowerCase().includes(containsWord.toLowerCase())
+        {campaigns &&
+          campaigns
+            .filter((campaigns) =>
+              campaigns.brand.toLowerCase().includes(containsWord.toLowerCase())
             )
             .filter((data) =>
               data.brand.toLowerCase().includes(selected.toLowerCase())
