@@ -38,7 +38,7 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div className="bg-creme mobS:bg-grey">
+    <div className="h-screen w-screen bg-creme mobS:bg-grey ">
       <input
         className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:hidden"
         type="text"
