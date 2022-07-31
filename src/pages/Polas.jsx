@@ -31,11 +31,11 @@ const Polas = () => {
   }, []);
 
   return (
-    <div className="bg-creme w-screen h-screen mobS:bg-grey">
+    <div className="bg-creme w-screen h-screen mobS:bg-grey mobS:rounded-lg">
       <NavBar />
       {/* model stats for mobile only */}
-      <div className="xs:hidden bg-grey">
-        <h1 className="font-title text-5xl text-center text-creme mobS:pt-10">
+      <div className="xs:hidden bg-grey mobS:rounded-lg">
+        <h1 className="font-title text-5xl text-center text-creme mobS:pt-10 ">
           MODEL stats
         </h1>
       </div>
@@ -55,10 +55,10 @@ const Polas = () => {
             ))}
         </div>
         <div className="w-1/2 flex flex-col mobS:hidden ">
-          <h1 className=" font-title text-7xl w-1/2 mt-8 opacity-80 mobS:text-xl">
+          <h1 className=" font-title text-7xl w-1/2 mt-8 opacity-80 mobS:text-xl ">
             MODEL stats,
           </h1>
-          <div className="flex flex-col group mt-5">
+          <div className="flex flex-col group mt-5 ">
             <div className=" h-60 w-32 flex bg-stone-900 opacity-90 " />
             {allmesures &&
               allmesures.map(({ name, description, id }) => (

@@ -21,11 +21,11 @@ const Shoot = () => {
   return (
     <div className="h-screen w-screen bg-creme ">
       <NavBar />
-      <div className="flex justify-center shadow-2xl rounded-lg pt-20 mx-20 mt-5 bg-creme mobS:hidden">
+      <div className="flex justify-center shadow-2xl rounded-lg pt-20 mx-20 mt-5 bg-creme mobS:hidden ">
         <Carousel />
       </div>
       {/* mobile version */}
-      <div className="xs:hidden bg-dark">
+      <div className="xs:hidden bg-grey mobS:pt-10 mobS:rounded-lg">
         {allimages &&
           allimages.map(({ name, id }) => <img key={id} src={name} />)}
       </div>
