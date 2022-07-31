@@ -42,7 +42,7 @@ const NavBar = () => {
       <div className="fixed right-6 xs:hidden top-5 scale-x-100 z-40 text-white">
         <MenuIcon onClick={showMenu} className="scale-150 cursor-pointer" />
       </div>
-      <div className="fixed z-50 text-white">
+      <div className="fixed  z-50 text-white">
         <MenuResponsiv showMenu={showMenu} active={active} />
       </div>
     </div>

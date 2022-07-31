@@ -34,9 +34,8 @@ const Polas = () => {
     <div className="bg-creme w-screen h-screen mobS:bg-grey">
       <NavBar />
       {/* model stats for mobile only */}
-      <div className="xs:hidden bg-grey mt-16">
-        <h1 className="font-title text-5xl text-center text-creme">
-          {" "}
+      <div className="xs:hidden bg-grey">
+        <h1 className="font-title text-5xl text-center text-creme mobS:pt-10">
           MODEL stats
         </h1>
       </div>
