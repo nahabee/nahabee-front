@@ -74,11 +74,14 @@ const Polas = () => {
           </div>
         </div>
       </div>
-      <div className="xs:hidden bg-grey mt-5">
-        <div className="flex flex-col text-creme ">
+      <div className="xs:hidden bg-grey mt-5 mobS:rounded-lg">
+        <div className="flex flex-col text-creme mobS:rounded-lg">
           {allmesures &&
             allmesures.map(({ name, description, id }) => (
-              <div key={id} className="flex flex-col mobS:ml-6 text-justify ">
+              <div
+                key={id}
+                className="flex flex-col mobS:ml-6 text-justify mobS:rounded-lg"
+              >
                 <a className="font-body text-xl tracking-widest">
                   <span className="font-subtitle text-2xl tracking-widest">
                     {name}
