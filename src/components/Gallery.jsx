@@ -38,7 +38,7 @@ const Gallery = () => {
     setSelected(brand.target.value);
   };
   return (
-    <div className="h-screen w-screen bg-creme mobS:bg-grey ">
+    <div className="h-screen w-screen bg-creme mobS:bg-grey mobS:rounded-lg ">
       <input
         className="outline-none focus w-96 mt-10 ml-[6%] rounded-lg focus:shadow-sm font-body mobS:hidden"
         type="text"
@@ -48,7 +48,7 @@ const Gallery = () => {
       />
 
       <select
-        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-40 mt-4 mobS:flex mobS:m-auto mobS:w-[70%] mobS:mt-10 "
+        className="outline-none font-body rounded-lg ml-4 focus:shadow-sm w-40 mt-4 mobS:flex mobS:m-auto mobS:w-[70%] mobS:mt-14 "
         onChange={(e) => handleSetBrand(e)}
       >
         <option value=""> All brands</option>

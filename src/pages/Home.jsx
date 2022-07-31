@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar";
 
 const Home = () => {
   return (
-    <div className="h-screen w-screen bg-creme">
+    <div className="h-screen w-screen bg-creme ">
       <div className="flex flex-col mobS:hidden ">
         <h1 className="font-title text-10xl text-green text-center">naha</h1>
         <h2 className="font-subtitle text-9xl text-center ">
@@ -14,7 +14,7 @@ const Home = () => {
         </h2>
       </div>
       {/* mobile version */}
-      <div className="xs:hidden bg-grey h-screen w-screen">
+      <div className="xs:hidden bg-grey h-screen w-screen mobS:rounded-lg">
         <NavBar />
         <div>
           <h1 className="font-title text-10xl flex justify-center text-creme">
