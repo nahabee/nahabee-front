@@ -60,7 +60,7 @@ const Gallery = () => {
           ))}
       </select>
 
-      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-grey mt-10 mobS:grid-cols-1">
+      <div className="text-gray-700 grid grid-cols-5 gap-4 bg-creme mobS:bg-grey mt-10 mobS:grid-cols-1 mobS:rounded-lg">
         {allimages &&
           allimages
             .filter((allimages) =>
