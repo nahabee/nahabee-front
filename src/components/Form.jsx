@@ -118,7 +118,6 @@ const Form = () => {
               placeholder="Message"
             ></textarea>
           </div>
-
           <button
             type="submit"
             className="flex 
@@ -132,10 +131,22 @@ const Form = () => {
       uppercase
       rounded
       
-       hover:bg-transparent hover:text-dark hover:border-grey hover:border"
+       hover:bg-transparent hover:text-dark hover:border-grey hover:border mobS:bg-creme mobS:text-dark"
           >
             Send
           </button>
+          <div className="flex gap-4 font-body justify-end text-grey mobS:text-creme">
+            <a
+              href="mailto: hello.nahabee@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <p>Gmail</p>
+            </a>
+            <a href="https://www.instagram.com/nahabee/" target="_blank">
+              <p>Instagram</p>
+            </a>
+          </div>
         </form>
       </div>
     </div>
