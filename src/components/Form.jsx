@@ -31,9 +31,6 @@ const Form = () => {
 
   return (
     <div className="bg-creme mobS:bg-grey">
-      <h1 className="font-title flex opacity-80 w-1/2 z-50 text-8xl m-auto mt-20 mobS:text-5xl mobS:mt-40 mobS:m-0 mobS:ml-5 mobS:text-creme mobS:opacity-100">
-        Ask anything
-      </h1>
       <div
         className="block p-6 pt-12 rounded-lg shadow-2xl m-auto w-1/2 -mt-10
         font-body mobS:w-4/5 mobS:mt-3"
