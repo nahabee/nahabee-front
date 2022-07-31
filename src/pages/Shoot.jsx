@@ -1,23 +1,11 @@
 import Carousel from "../components/Carousel";
 import NavBar from "../components/NavBar";
-import axios from "axios";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
+
+import CurrentDataContext from "../context/currentData";
 
 const Shoot = () => {
-  const [allimages, setAllImages] = useState([]);
-
-  // axios pour récupèrer les images par page
-
-  useEffect(() => {
-    const getallImages = async () => {
-      // verifier que le .env soit bien identique au lien postman qui fonctionne
-      const { data } = await axios.get(
-        `${import.meta.env.VITE_API_URL}api/pages/21/images`
-      );
-      setAllImages(data);
-    };
-    getallImages();
-  }, []);
+  const { shoot } = useContext(CurrentDataContext);
   return (
     <div className="h-screen w-screen bg-creme ">
       <NavBar />
@@ -26,8 +14,7 @@ const Shoot = () => {
       </div>
       {/* mobile version */}
       <div className="xs:hidden bg-grey mobS:pt-10 mobS:rounded-lg">
-        {allimages &&
-          allimages.map(({ name, id }) => <img key={id} src={name} />)}
+        {shoot && shoot.map(({ name, id }) => <img key={id} src={name} />)}
       </div>
     </div>
   );
