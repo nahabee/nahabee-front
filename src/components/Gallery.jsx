@@ -58,16 +58,26 @@ const Gallery = () => {
             .filter((data) =>
               data.brand.toLowerCase().includes(selected.toLowerCase())
             )
-            .map(({ id, name, brand }) => (
+            .map(({ id, name, brand, type }) => (
               <div key={id}>
                 <a className="hidden">{brand}</a>
-                <img
-                  alt="gallery"
-                  value={containsWord}
-                  onChange={(e) => handleContainsWord(e.target.value)}
-                  className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
-                  src={name}
-                />
+                {type === 0 ? (
+                  <img
+                    value={containsWord}
+                    onChange={(e) => handleContainsWord(e.target.value)}
+                    className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
+                    src={name}
+                  />
+                ) : (
+                  <video
+                    alt="gallery"
+                    autoPlay={true}
+                    value={containsWord}
+                    onChange={(e) => handleContainsWord(e.target.value)}
+                    className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
+                    src={name}
+                  />
+                )}
               </div>
             ))}
       </div>
