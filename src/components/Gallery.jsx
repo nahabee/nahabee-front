@@ -70,13 +70,14 @@ const Gallery = () => {
                   />
                 ) : (
                   <video
-                    alt="gallery"
-                    autoPlay={true}
                     value={containsWord}
+                    autoPlay
+                    muted
                     onChange={(e) => handleContainsWord(e.target.value)}
                     className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
-                    src={name}
-                  />
+                  >
+                    <source src={name} />
+                  </video>
                 )}
               </div>
             ))}
