@@ -26,6 +26,7 @@ const Gallery = () => {
   const handleSetBrand = (brand) => {
     setSelected(brand.target.value);
   };
+
   return (
     <div className="h-screen w-screen bg-creme mobS:bg-grey mobS:rounded-lg ">
       <input
@@ -60,12 +61,15 @@ const Gallery = () => {
             )
             .map(({ id, name, brand, type }) => (
               <div key={id}>
-                <a className="hidden">{brand}</a>
                 {type === 0 ? (
                   <img
                     value={containsWord}
                     onChange={(e) => handleContainsWord(e.target.value)}
-                    className="block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
+                    className={
+                      selected === "" && brand === "Méduse"
+                        ? "hidden"
+                        : "block object-cover object-center rounded-lg w-[70%] ml-10 mobS:m-auto mobS:mb-5"
+                    }
                     src={name}
                   />
                 ) : (
